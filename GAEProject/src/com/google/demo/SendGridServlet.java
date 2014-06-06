@@ -25,6 +25,7 @@ public class SendGridServlet extends HttpServlet {
 		try {
 			// Get parameters
 			String[] tos = req.getParameter("to").split(",");
+			String[] tonames = req.getParameter("toname").split(",");
 			Address from = new InternetAddress(req.getParameter("from").trim());
 			String subject = req.getParameter("subject");
 			String text = req.getParameter("text");
@@ -35,6 +36,7 @@ public class SendGridServlet extends HttpServlet {
 				Address toa = new InternetAddress(to.trim());
 				sendgrid.addTo(toa.toString(), "");
 			}
+			sendgrid.addSubstitution("toname", tonames);
 			sendgrid.setFrom(from.toString());
 			sendgrid.setSubject(subject);
 			sendgrid.setText(text);
