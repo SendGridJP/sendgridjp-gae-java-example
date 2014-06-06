@@ -1,4 +1,4 @@
-package com.google.com;
+package com.google.demo;
 import java.io.IOException;
 import javax.servlet.http.*;
 

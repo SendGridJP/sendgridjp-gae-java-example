@@ -6,12 +6,22 @@ xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
 		<servlet-name>GAEProject</servlet-name>
-		<servlet-class>com.google.com.GAEProjectServlet</servlet-class>
+		<servlet-class>com.google.demo.GAEProjectServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>GAEProject</servlet-name>
 		<url-pattern>/gaeproject</url-pattern>
 	</servlet-mapping>
+	
+	<servlet>
+	    <servlet-name>SendGrid</servlet-name>
+		<servlet-class>com.google.demo.SendGridServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>SendGrid</servlet-name>
+		<url-pattern>/sendgridservlet</url-pattern>
+	</servlet-mapping>
+	
 	<welcome-file-list>
 		<welcome-file>index.html</welcome-file>
 	</welcome-file-list>
